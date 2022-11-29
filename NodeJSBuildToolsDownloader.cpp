@@ -46,7 +46,7 @@ int main()
 		ofstream file(filename);
 
 		file << "@echo off" << endl;
-		file << "powershell.exe -InputFormat None -ExecutionPolicy Bypass -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')); choco upgrade -y python visualstudio2019-workload-vctools; Exit" << endl;
+		file << "powershell.exe -InputFormat None -ExecutionPolicy Bypass -NoProfile -Command [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')); choco upgrade -y python visualstudio2019-workload-vctools; Exit" << endl;
 
 		file.close();
 
